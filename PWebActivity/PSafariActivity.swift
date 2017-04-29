@@ -11,7 +11,8 @@ public class PSafariActivity : UIActivity {
     private var url: URL?
 
     public override var activityTitle: String? {
-        return NSLocalizedString("Open in Safari", comment: "")
+        let bundle = Bundle(for: type(of: self))
+        return bundle.localizedString(forKey: "Open in Safari", value: "Open in Safari", table: nil)
     }
 
     public override var activityType: UIActivityType? {
@@ -20,7 +21,8 @@ public class PSafariActivity : UIActivity {
     }
 
     public override var activityImage: UIImage? {
-        return UIImage(named: "Safari")
+        let bundle = Bundle(for: type(of: self))
+        return UIImage(named: "Safari", in: bundle, compatibleWith: nil)
     }
 
     private func url(from activityItems: [Any]) -> URL? {

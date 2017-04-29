@@ -14,7 +14,8 @@ public class PChromeActivity : UIActivity {
     private var url: URL?
 
     public override var activityTitle: String? {
-        return NSLocalizedString("Open in Chrome", comment: "")
+        let bundle = Bundle(for: type(of: self))
+        return bundle.localizedString(forKey: "Open in Chrome", value: "Open in Chrome", table: nil)
     }
 
     public override var activityType: UIActivityType? {
@@ -23,7 +24,8 @@ public class PChromeActivity : UIActivity {
     }
 
     public override var activityImage: UIImage? {
-        return UIImage(named: "Chrome")
+        let bundle = Bundle(for: type(of: self))
+        return UIImage(named: "Chrome", in: bundle, compatibleWith: nil)
     }
 
     private var isChromeInstalled: Bool {
