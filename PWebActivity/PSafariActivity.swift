@@ -6,20 +6,20 @@
 
 import UIKit
 
-class PSafariActivity : UIActivity {
+public class PSafariActivity : UIActivity {
 
     private var url: URL?
 
-    override var activityTitle: String? {
+    public override var activityTitle: String? {
         return NSLocalizedString("Open in Safari", comment: "")
     }
 
-    override var activityType: UIActivityType? {
+    public override var activityType: UIActivityType? {
         let className = NSStringFromClass(type(of: self))
         return UIActivityType(rawValue: className)
     }
 
-    override var activityImage: UIImage? {
+    public override var activityImage: UIImage? {
         return UIImage(named: "Safari")
     }
 
@@ -32,17 +32,17 @@ class PSafariActivity : UIActivity {
         return nil
     }
 
-    override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
+    public override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
         return url(from: activityItems) != nil
     }
 
-    override func prepare(withActivityItems activityItems: [Any]) {
+    public override func prepare(withActivityItems activityItems: [Any]) {
         if let url = url(from: activityItems) {
             self.url = url
         }
     }
 
-    override func perform() {
+    public override func perform() {
         guard let url = self.url else { return }
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url)

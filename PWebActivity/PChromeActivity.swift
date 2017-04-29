@@ -9,20 +9,20 @@ import UIKit
 private let kChromeHTTPScheme = "googlechrome"
 private let kChromeHTTPSScheme = "googlechromes"
 
-class PChromeActivity : UIActivity {
+public class PChromeActivity : UIActivity {
 
     private var url: URL?
 
-    override var activityTitle: String? {
+    public override var activityTitle: String? {
         return NSLocalizedString("Open in Chrome", comment: "")
     }
 
-    override var activityType: UIActivityType? {
+    public override var activityType: UIActivityType? {
         let className = NSStringFromClass(type(of: self))
         return UIActivityType(rawValue: className)
     }
 
-    override var activityImage: UIImage? {
+    public override var activityImage: UIImage? {
         return UIImage(named: "Chrome")
     }
 
@@ -40,18 +40,18 @@ class PChromeActivity : UIActivity {
         return nil
     }
 
-    override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
+    public override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
         guard isChromeInstalled else { return false }
         return url(from: activityItems) != nil
     }
 
-    override func prepare(withActivityItems activityItems: [Any]) {
+    public override func prepare(withActivityItems activityItems: [Any]) {
         if let url = url(from: activityItems) {
             self.url = url
         }
     }
 
-    override func perform() {
+    public override func perform() {
         guard let url = self.url else { return }
         let string = url.absoluteString
         guard let range = string.range(of: ":") else { return }
