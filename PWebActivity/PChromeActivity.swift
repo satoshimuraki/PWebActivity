@@ -66,7 +66,11 @@ class PChromeActivity : UIActivity {
             return
         }
         guard let newURL = URL(string: newString) else { return }
-        UIApplication.shared.open(newURL)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(newURL)
+        } else {
+            UIApplication.shared.openURL(newURL)
+        }
     }
 
 }

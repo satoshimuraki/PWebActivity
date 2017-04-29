@@ -44,7 +44,11 @@ class PSafariActivity : UIActivity {
 
     override func perform() {
         guard let url = self.url else { return }
-        UIApplication.shared.open(url)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
 
 }
