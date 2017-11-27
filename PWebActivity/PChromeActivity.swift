@@ -57,8 +57,8 @@ public class PChromeActivity : UIActivity {
         guard let url = self.url else { return }
         let string = url.absoluteString
         guard let range = string.range(of: ":") else { return }
-        let scheme = string.substring(to: range.lowerBound).lowercased()
-        let afterScheme = string.substring(from: range.upperBound)
+        let scheme = string.prefix(upTo: range.lowerBound).lowercased()
+        let afterScheme = string.suffix(from: range.upperBound)
         let newString: String
         if scheme == "http" {
             newString = "\(kChromeHTTPScheme):\(afterScheme)"
