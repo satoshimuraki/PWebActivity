@@ -33,22 +33,13 @@ public class PChromeActivity : UIActivity {
         return UIApplication.shared.canOpenURL(url)
     }
 
-    private func url(from activityItems: [Any]) -> URL? {
-        for item in activityItems {
-            if let url = item as? URL {
-                return url
-            }
-        }
-        return nil
-    }
-
     public override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
         guard isChromeInstalled else { return false }
-        return url(from: activityItems) != nil
+        return URL.url(from: activityItems) != nil
     }
 
     public override func prepare(withActivityItems activityItems: [Any]) {
-        if let url = url(from: activityItems) {
+        if let url = URL.url(from: activityItems) {
             self.url = url
         }
     }
