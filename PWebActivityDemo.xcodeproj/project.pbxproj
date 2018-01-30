@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7460E7E2201FEF4100D6B557 /* PWebActivityUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7460E7E1201FEF4100D6B557 /* PWebActivityUtility.swift */; };
 		7471058E1EB3145E0045AFF5 /* PWebActivity.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7471058D1EB3145E0045AFF5 /* PWebActivity.xcassets */; };
 		747105911EB31E250045AFF5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 747105931EB31E250045AFF5 /* Localizable.strings */; };
 		74CC05541EB30AF300CA05C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CC05531EB30AF300CA05C5 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		745463771EB31EB900504A4A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7460E7E1201FEF4100D6B557 /* PWebActivityUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWebActivityUtility.swift; sourceTree = "<group>"; };
 		7471058D1EB3145E0045AFF5 /* PWebActivity.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PWebActivity.xcassets; sourceTree = "<group>"; };
 		747105921EB31E250045AFF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		74CC05501EB30AF300CA05C5 /* PWebActivityDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWebActivityDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,9 +79,10 @@
 		74CC05651EB30B1B00CA05C5 /* PWebActivity */ = {
 			isa = PBXGroup;
 			children = (
-				7471058D1EB3145E0045AFF5 /* PWebActivity.xcassets */,
 				74CC05671EB30B1B00CA05C5 /* PChromeActivity.swift */,
 				74CC05681EB30B1B00CA05C5 /* PSafariActivity.swift */,
+				7460E7E1201FEF4100D6B557 /* PWebActivityUtility.swift */,
+				7471058D1EB3145E0045AFF5 /* PWebActivity.xcassets */,
 				747105931EB31E250045AFF5 /* Localizable.strings */,
 			);
 			path = PWebActivity;
@@ -164,6 +167,7 @@
 			files = (
 				74CC05561EB30AF300CA05C5 /* ViewController.swift in Sources */,
 				74CC056B1EB30B1B00CA05C5 /* PChromeActivity.swift in Sources */,
+				7460E7E2201FEF4100D6B557 /* PWebActivityUtility.swift in Sources */,
 				74CC05541EB30AF300CA05C5 /* AppDelegate.swift in Sources */,
 				74CC056C1EB30B1B00CA05C5 /* PSafariActivity.swift in Sources */,
 			);
