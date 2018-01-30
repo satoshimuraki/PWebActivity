@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,10 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wh-gu-FXq">
-                                <rect key="frame" x="167" y="318" width="40" height="30"/>
-                                <state key="normal" title="Share"/>
+                                <rect key="frame" x="150.5" y="318" width="73" height="30"/>
+                                <state key="normal" title="Share URL"/>
                                 <connections>
-                                    <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XXp-EZ-7S1"/>
+                                    <action selector="shareURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IBp-xc-TD7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehT-Pu-gxd">
+                                <rect key="frame" x="145" y="356" width="85" height="30"/>
+                                <state key="normal" title="Share String"/>
+                                <connections>
+                                    <action selector="shareString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjq-XU-Dbb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,6 +40,8 @@
                         <constraints>
                             <constraint firstItem="0Wh-gu-FXq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="15h-s9-xhR"/>
                             <constraint firstItem="0Wh-gu-FXq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ARf-0E-dhH"/>
+                            <constraint firstItem="ehT-Pu-gxd" firstAttribute="top" secondItem="0Wh-gu-FXq" secondAttribute="bottom" constant="8" id="SPr-tS-tyw"/>
+                            <constraint firstItem="ehT-Pu-gxd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YLg-d6-6Wl"/>
                         </constraints>
                     </view>
                 </viewController>
