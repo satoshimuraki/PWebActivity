@@ -9,7 +9,7 @@ import Foundation
 extension String {
 
     var containedWebURLs: [URL] {
-        let pattern = "(https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*))"
+        let pattern = "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)"
         let regex = try! NSRegularExpression(pattern: pattern)
         let matches = regex.matches(in: self, options: [], range: NSMakeRange(0, self.count))
         var result: [URL] = []
