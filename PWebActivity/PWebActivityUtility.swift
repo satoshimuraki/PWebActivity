@@ -28,8 +28,8 @@ extension String {
 extension URL {
 
     static func url(from activityItems: [Any]) -> URL? {
-        return activityItems.flatMap({ $0 as? URL }).first ??
-               activityItems.flatMap({ $0 as? String }).flatMap({ $0.containedWebURLs.first }).first
+        return activityItems.compactMap({ $0 as? URL }).first ??
+               activityItems.compactMap({ $0 as? String }).compactMap({ $0.containedWebURLs.first }).first
     }
 
 }

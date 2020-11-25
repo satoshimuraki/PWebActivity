@@ -15,9 +15,9 @@ public class PSafariActivity : UIActivity {
         return bundle.localizedString(forKey: "Open in Safari", value: "Open in Safari", table: nil)
     }
 
-    public override var activityType: UIActivityType? {
+    public override var activityType: UIActivity.ActivityType? {
         let className = NSStringFromClass(type(of: self))
-        return UIActivityType(rawValue: className)
+        return UIActivity.ActivityType(rawValue: className)
     }
 
     public override var activityImage: UIImage? {
